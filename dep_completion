@@ -5,7 +5,7 @@ _dep()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
     if [ -d "./lib/" ]; then
-		opts=$(ls ./lib/)
+        opts=$(ls -d lib/*/ | cut -f2 -d'/')
     fi
     opts="$opts pull status"
 
