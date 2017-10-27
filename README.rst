@@ -7,6 +7,7 @@ offers a simple status command, pull and proxied git commands as follows:
 
 .. image:: example.png
 
-## Installation
+Installation
+------------
 
 On linux... clone the repo and run ``./install.sh``.
