@@ -12,4 +12,4 @@ _dep()
     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
     return 0
 }
-complete -F _dep /usr/bin/dep
+complete -F _dep dep
