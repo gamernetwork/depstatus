@@ -1,0 +1,15 @@
+_dep() 
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    if [ -d "./lib/" ]; then
+        opts=$(ls -d lib/*/ | cut -f2 -d'/')
+    fi
+    opts="$opts pull status"
+
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+complete -F _dep dep
